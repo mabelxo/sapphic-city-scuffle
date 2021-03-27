@@ -29,10 +29,8 @@ public class PlayerController : MonoBehaviour
     //Assigning a variable where we'll store the Rigidbody2D component.
     private Rigidbody2D rb;
 
-    private float dodgeDuration;
     private float currentDodgeTime;
     private float currentAttackTime;
-    private float currentStamina = 100.0f;
     private bool isDodging;
     private bool isAttacking;
     private bool isInvincible;
@@ -52,9 +50,6 @@ public class PlayerController : MonoBehaviour
         //Sets our variable 'rb' to the Rigidbody2D component on the game object where this script is attached.
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
-
-        //set Stamina to full
-        currentStamina = maxStamina;
 
     }
 
@@ -86,7 +81,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Movement code for left and right arrow keys.
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && isAttacking == false && isDodging == false)
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
             if (playerSprite != null)
@@ -95,7 +90,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) && isAttacking == false && isDodging == false)
         {
             rb.velocity = new Vector2(+moveSpeed, rb.velocity.y);
             if (playerSprite != null)

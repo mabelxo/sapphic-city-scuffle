@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float dodgeForce;
     public float startDodgeTime;
-    public float maxStamina = 100.0f;
     public Animator playerAnimator;
     public SpriteRenderer playerSprite;
     public AudioSource jumpSource;
@@ -19,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public Transform kickPoint;
     public LayerMask enemyLayers;
 
+    public bool isInvincible;
     public float startAttackTime;
     public float punchRange = 0.5f;
     public float kickRange = 0.5f;
@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
     private float currentAttackTime;
     private bool isDodging;
     private bool isAttacking;
-    private bool isInvincible;
     private bool isDodgeCoolingDown;
     private bool isAttackCoolingDown;
 
@@ -252,6 +251,7 @@ public class PlayerController : MonoBehaviour
         isAttackCoolingDown = false;
         Debug.Log("Attack cooldown finished");
     }
+
 
 }
 

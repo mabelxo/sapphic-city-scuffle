@@ -2374,7 +2374,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 100
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -2394,8 +2394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271305605f6594d80b875b0ac6a9f0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  dodgeForce: 7
+  moveSpeed: 14
+  dodgeForce: 25
   startDodgeTime: 0.4
   playerAnimator: {fileID: 1157311290}
   playerSprite: {fileID: 1157311283}
@@ -2412,8 +2412,8 @@ MonoBehaviour:
   punchDamage: 10
   kickDamage: 15
   invincibilityDurationSeconds: 0.3
-  dodgeCooldownSeconds: 0.6
-  attackCooldownSeconds: 0.4
+  dodgeCooldownSeconds: 0.8
+  attackCooldownSeconds: 0.6
 --- !u!61 &1157311287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2709,7 +2709,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: d719d8641f82d46df84dfb1e8976e3e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -2782,8 +2782,8 @@ MonoBehaviour:
     m_Bits: 256
   enemyAnimator: {fileID: 1832373571}
   enemySprite: {fileID: 1832373566}
-  enemyMoveSpeed: 5
-  enemyDodgeForce: 7
+  enemyMoveSpeed: 14
+  enemyDodgeForce: 25
   enemyStartDodgeTime: 0.4
   startEnemyAttackTime: 0.6
   enemyPunchRange: 0.5
@@ -2841,7 +2841,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 100
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

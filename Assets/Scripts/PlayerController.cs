@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
             if (playerSprite != null)
             {
                 //playerSprite.flipX = true;
+                playerAnimator.SetTrigger("walkLeft");
             }
         }
 
@@ -95,17 +96,20 @@ public class PlayerController : MonoBehaviour
             if (playerSprite != null)
             {
                 //playerSprite.flipX = false;
+                playerAnimator.SetTrigger("walkRight");
             }
             else
             {
                 Debug.Log("Sprite Renderer not found");
             }
         }
+
         //ELSE if we're not pressing an arrow key, our velocity is 0 along the X axis, and whatever the Y velocity is (determined by jump)
-        else
+                else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
-         
+            playerAnimator.ResetTrigger("walkRight");
+            playerAnimator.ResetTrigger("walkLeft");
         }
 
         if (playerAnimator != null)
